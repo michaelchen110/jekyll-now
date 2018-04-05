@@ -10,7 +10,7 @@ tagline:             'M.S. Computer Science @ UCLA'
 description:         'Born in Taipei, Taiwan.<br>Studying in Los Angeles now.<br><br>Share what I saw and experienced in the United States.'
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
-paginate:            5
+paginate:            1
 excerpt_separator:  '<!-- more -->'
 
 # About/contact
