@@ -3,7 +3,7 @@ layout: post
 title: 2018北美實習面經
 ---
 
-這邊整理了我在找2018 summer intern面試的17家公司，接近30輪interviews，還有5家OA/Take home assignment。先分類、再按照面試時間排序。
+這邊整理了我在找2018 summer intern面試的17家公司，接近30輪interviews，還有4家OA/Take home assignment。先分類、再按照面試時間排序。
 
 <!-- more -->
 
@@ -14,7 +14,7 @@ title: 2018北美實習面經
     * 01.25 <a href="#linkedin">LinkedIn</a>
     * 02.14 <a href="#intel">Intel</a>
     * 02.16 <a href="#paypal">PayPal</a> (offer)
-2. <a href="#startup">中小型、新創</a>
+2. <a href="#startup">中小型 & 新創</a>
     * 11.07 <a href="#textpert">Textpert</a> (offer)
     * 12.14 <a href="#appfolio">AppFolio</a>
     * 01.10 <a href="#tripadvisor">TripAdvisor</a>
@@ -32,7 +32,6 @@ title: 2018北美實習面經
     * <a href="#twitter">Twitter</a>
     * <a href="#ebay">eBay</a>
     * <a href="#citadel">Citadel</a>
-    * <a href="#squarespace">Squarespace</a>
     * <a href="#adobe">Adobe</a>
 
 <br>
@@ -94,7 +93,7 @@ _45 mins_ ，印度小哥
 在第一通電面完後緊接著第二輪。一開始三哥電話還打不通，我才意識到宿舍的訊號太爛。接通後給了Google Doc，
 問了一道leetcode原題
 
-    Search min in a rotated sorted array
+    Search in Rotated Sorted Array
 
 比較值得一提的是中間的溝通。由於剛來美國，聽印度腔英文真的不適應，加上宿舍收訊巨爛，對方講了很多都沒能聽清楚，因此他很多不用講的，打在Google doc上。當時演戲技能太差又緊張，一開始馬上就講正解用binary search，他就說，我看不出來這哪裡能用binary search，然後就說你要不先用一個簡單的方法吧。我就說O(N)從頭開始找，然後再優化。接著講bianry search做法，簡單解釋一下算法，就開始寫代碼。寫一寫他問為什麼要這樣分if else，我就說就是我前面解釋的那個，然後他說我沒有講，我就很無言，然後給他看上面我打字解釋過的部份再講一次，接著就把它寫完了。不過有syntax error，前幾天寫太多tensorflow，結果用Java不小心沒加分號......被他說：「I think you misuse the other language」。最後說他很surprise我能用這個解法解出來。
 
@@ -501,7 +500,29 @@ _1 hour_ 印度男
 
 遇到插曲，collabedit網站掛掉寫不了code，我就在skype上面打一行說明一行，而且還沒有縮排，但還是有解釋清楚。
 
-> Q2: 各種Java觀念
+> Q2: implement Binary Search
+
+此時colladbedit還是爛掉，於是也只能在skype messege裡敲代碼，這邊我用這個<a href="http://community.bittiger.io/topic/241/一起lintcode-二分查找看这篇就够了">binary search系列模版</a>
+
+    public int bsearch(int[] nums, int target) {
+        if (nums.length == 0) return -1;
+        int start = 0, end = nums.length - 1;
+        // 不用start < end 是為了避免有些情況會infinite loop
+        while (start + 1 < end) {
+            // 這邊跟面試官解釋了
+            // integer overflow problem using mid = (start + end) / 2
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) return mid;
+            else if (nums[mid] < target) start = mid;
+            else end = mid;
+        }
+        // 改良start + 1 < end後的二次判定
+        if (nums[start] == target) return start;
+        if (nums[end] == target) return end;
+        return -1;
+    }
+
+> Q3: 各種Java觀念
 * What's Polynorphism?
 * Why cannot use multiple inheritence? 
 * Experience in Tomcat web service?
@@ -543,8 +564,8 @@ _30 mins_ 美國工程師小哥
 * 如果permutation的字要在字典，要怎麼辦？trie tree
 * 現在一個人打字打到一半，I like to (228) ，如果要用deep learning來找出最有可能出現的字來推薦，怎做
 
-**3rd technical**
-_30 mins_ 美國工程師小哥 
+**3rd technical**  
+_30 mins_ 美國工程師小哥  
 
 >    
 * 講一下實習項目
@@ -736,14 +757,14 @@ _30 mins_  CEO
 <a name="nutanix"></a>
 ### **Nutanix** (3600 employees)
 #### _內推 | ML/NLP intern_
-_45 mins_ 印度小哥  
 做Cloud Enterprise的公司，ML team會針對用戶使用系統的行為資料進行分析，比方說file system access, monitor anomoly behavior,，NLP的部分有兩個應用場景，一個是search query analysis，一個是document classification。
 
-HR Screening
+**HR Screening**  
 問了一下過去experience，我在被內推的時候並沒有選擇position，HR就說有新開一個ML/NLP position感覺跟我比較match，就幫我schedule了隔天給相關的team interview
 
-Phone Interview 
-印度人，給了一個coding的連結，結果全部都問觀念，focus on ML, python language and OS concepts
+**Phone Interview**  
+_45 mins_ 印度小哥   
+給了一個coding的連結，結果全部都問觀念，focus on ML, python language and OS concepts
 * given two python list with unsorted integers, return same elements
 * do you have experience on writing ML algorithm from scratch? 
 * explain OS memory management 
@@ -790,19 +811,23 @@ Introduction. He introduced himself, and then let me introduce my previous exper
 
 <a name="row"></a>
 ### **ROW Asset Management**
-約十人左右的quant company，總部在NYC。
-
 #### _CS eamil | Python Distributed Developer Intern_
-_1 hour_ 印度小哥  
-MFE有個quant night，系上寄信給CS student說有這個position，我就立刻寄信，不到一小時就收到了面是邀請。
+約十人左右的quant company，總部在NYC。MFE有個quant night，系上寄信給CS student說有這個position，我就立刻寄信，不到一小時就收到了面試邀請。
 
 **On Campus Interview (Anderson classroom)**  
+_1 hour_ 印度校友  
 互相自介。
-> print out the power set (all subsets) of an integer set  
+> Q1. SQL concept. Update a table using nested query
+
+> Q2. print out the power set (all subsets) of an integer set S
 
 叫我現場用自己的編輯器coding，說了句：「people always say someting on their resume, but the best way is letting them code」，非常嗆，我就毫不猶豫的用VIM快速寫了個Java的DFS解法並且過test case。然後它就給了一個python的快速解法，用integer存，但是我點出了前提得要set S的power set 不能超過2^32個可能。他說很不錯可以這麼短時間寫出來，可惜他們徵的是python developer，所以就不是很match。  
 
-> 各種OS concepts，e.g. process v.s. thread?
+> Q3. 各種OS concepts
+
+* process v.s. thread?
+* inner process communication
+* deadlock
 
 - - - 
 <a name="oversea"></a>
@@ -810,10 +835,11 @@ MFE有個quant night，系上寄信給CS student說有這個position，我就立
 
 <a name="tencent"></a>
 ### **Tencent 中國騰訊**
-騰訊很用心，派了大批人馬來北美各大城市名校招聘實習生。
+騰訊很用心，派了大批人馬來北美各大城市名校招聘實習生。全程中文面試，倍感親切。
 
 #### _海投 | NLP技術研究實習_
 **On Campus (USC Leavey Library)**  
+_1 hour_ 中國大哥  
 一進門問好不到三十秒，小哥就拿了張紙條出來說，先做一下這道題吧
 
     Input: 2 integer arrays
@@ -824,11 +850,14 @@ MFE有個quant night，系上寄信給CS student說有這個position，我就立
     [2, 2, 1, 3, 3, 5, 4]
     Solution: LinkedHashMap
 
-我們再來看一下這道題
+過程中我詢問是否要think out loud，他說你全部寫完再跟我說。這點與美國面試相當不同。寫完後被問了複雜度，接著小哥從紙堆中又拿了一道題出來，「我們再來看一下這道題」
 
     Leetcode 417. Pacific Atlantic Water Flow
 
-**HR phone interview**
+半年多前做過這道，但忘了，跟面試官提出了幾個思路，被面試官說你再想一下，最後想出了解法並說明，但有點run out of time。所以剩下十分鐘就聊一下NLP research，我講解了一下deep learning model in coreference resolution。
+
+**HR phone interview**  
+_1 hour_ 中國姐姐  
 * 為什麼會想來騰訊
 * 對騰訊的了解
 * 未來職涯規劃
@@ -960,26 +989,50 @@ _1 hour_ Search team manager
 
 - - - 
 
+<a name="oa"></a>   
 ## 五、OA/ Take Home Assignment
-
-TODO
 
 <a name="ebay"></a>
 ### **eBay**
 #### _Take Home | Data Science Inern_
+Finished Kaggle chanllege <a href="https://www.kaggle.com/c/DontGetKicked">"Don't Get Kicked"</a> and upload
 
 <a name="twitter"></a>
 ### **Twitter**
 #### _OA | Software Development Engineer Intern_
+有投就給OA，有六七組題庫隨機抽選一組，我拿到了OA Test 7，共三題，建議90 mins內完成
+> Leetcode 585. Investments in 2016  
+
+> 忘了，easy 難度的題  
+
+> 給一段密文，先用「肉眼」解密，之後再寫code用這組key解出密文輸出明文
 
 <a name="citadel"></a>
 ### **Citadel**
 #### _OA | Software Development Engineer Intern_
-
-<a name="squarespaece"></a>
-### **Squarespace**
-#### _Take Home | Data Science Inern_
+有投就給OA，考察範圍廣泛
+* pandas library
+    - cleaning up missing data
+    - detect NaN
+    - add new column
+* math
+    - which is larger ? max_x min_y f(x, y) v.s. min_y max_x f(x, y)
+    - Guassian Distribution
+    - homoskedastic error
+    - probability question
+* machine learning
+    - perceptron convergence properties
+    - hyperparameter search v.s. grid search
+    - L0, L1, L2 norm
+    - KNN algorithm
 
 <a name="adobe"></a>
 ### **Adobe**
 #### _Take Home | Data Science Inern_
+* Using some set of the variables a-h in the file intern_data.csv, create a model to predict y
+* Use your model to create predicted values of y given the variables a-h in the file intern_test.csv
+* Respond with a file intern_predicted.csv which contains two columns:
+    - i: the index from intern_test.csv
+    - y: your predicted values
+* Please also include the code you used to generate the predicted values in your response. There are no restrictions on programming language.
+
