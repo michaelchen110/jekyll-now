@@ -810,9 +810,11 @@ MFE有個quant night，系上寄信給CS student說有這個position，我就立
 
 <a name="tencent"></a>
 ### **Tencent 中國騰訊**
+騰訊很用心，派了大批人馬來北美各大城市名校招聘實習生。
+
 #### _海投 | NLP技術研究實習_
-**On Campus (USC Leavey Library)**
-一進門問好不到三十秒，國人小哥就拿了張紙條出來說，先做一下這道題吧
+**On Campus (USC Leavey Library)**  
+一進門問好不到三十秒，小哥就拿了張紙條出來說，先做一下這道題吧
 
     Input: 2 integer arrays
     array 1 = [5, 3, 2, 2, 1, 3, 4]
@@ -827,19 +829,140 @@ MFE有個quant night，系上寄信給CS student說有這個position，我就立
     Leetcode 417. Pacific Atlantic Water Flow
 
 **HR phone interview**
-
+* 為什麼會想來騰訊
+* 對騰訊的了解
+* 未來職涯規劃
+* 美國的科技科研還是更前沿一點，為何要來我們這邊？
+* 對加班的看法
 
 <a name="sea"></a>
 ### **SEA**
 #### _Recruiter LinkedIn 聯繫 | Software Development Engineer Intern_
-新加坡的公司，Garena前身，所有面試問最難的公司
-HR Screening (Skype)
+新加坡的公司，Garena前身
+
+**HR Screening (Skype)**
 說明了有三個組，mobile development, backend, Shopee Search team
-1st phone interview
+
+**1st phone interview**
+
+> Q1: Given an array of ints, and an integer n
+> Find all distinct pairs of integers in the array that sum up to n
+> 
+> Example:
+> [6,1,0,3,5,3,4,2,4,5]      n = 8
+> Ans: [(3, 5), (4, 4)]     (4, 4), (3, 5)   (5,3)
+> 
+> Constraints
+> - array is not sorted, can have duplicates
+> - integers range from 0 to 2^32 - 1
+> - length of array can be from 0 to 2^32 - 1
+> - answer has distinct pairs
+> - order inside the answer doesnt matter
+> - optimise in terms of time and space complexity
+> 
+> Write a function to solve the problem
+> input: int arr, int n
+> output: list of pairs
+
+    class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello, world!");
+        }
+        // nums = [], nums = [0], num =[6,1,0,3,5,3,4,2,4,5] 
+        public List<List<Integer>> pair(int[] nums, int n) {
+            // space: O(N)
+            Map<Integer, Integer> map = new HashMap<>();
+            
+            // time: O(N)
+            for (int num: nums) {
+                map.put(num, map.getOrDefault(num, 0) + 1);
+            }
+             
+            // time: O(N)   
+            List<List<Integer>> list = new LinkedList<>();
+            for (Integer num: map.keySet()) {
+                if (map.contains(n - num)) {        
+                    if (num < n / 2 || num == n / 2 && map.get(num) > 1) {
+                        // n = 8, num = 3, map contains 5
+                        List<Integer> pair = new LinkedList<>();
+                        pair.add(num);
+                        pair.add(n - num);
+                        list.add(pair);
+                    }
+                }
+            }
+            return list;
+            
+            // total time: O(N)
+            // space: O(N)
+        }
+    }
+
+
+> Q2: There are following two tables in a database.
+> user_info table, which stores users' basic information. Structured as below:
+> 
+> Field		       Type		    Description  
+> user_id		    INT		    ID of user. Primary key  
+> user_name		VARCHAR(32)		username  
+> 
+> user_login_log table, which stores users' login records. Structured as below:
+> 
+> Field		    Type	    	Description  
+> id		        INT		        primary key  
+> user_id		    INT		        ID of user.  
+> login_time		DATETIME		time of this login.  
+> 
+> Now please write a SQL statement to query user name and login count for all users who have logged in for more than 100 times in the year of 2014, and sort the query results by the login count in descending order:
+
+    select user_name as Name, count(login_time) as Time
+    from user_info I, user_login_log L
+    where I.user_id == L.user_id && get_year(login_time) == 2014
+    group by user_id
+    having count(login_time) > 100
+    order by count(login_time) desc
+    
+
+> Q3. How will database take use of composite index INDEX(a, b) in the "user" table for following queries?  
+> A. SELECT * FROM user WHERE a=0 AND b=0;  
+> B. SELECT * FROM user WHERE a=0 OR b=0;  
+> C. SELECT * FROM user WHERE a>0 AND b=0;  
+> D. SELECT * FROM user WHERE a=0 AND b>0;  
+
+> Q4. OS concepts
+* process vs thread
+* context switch
+* virtual memory
+* mutex vs semaphore
+
+    mutex true/false 
+    semaphore counter
+    if (mutex) {
+       execute          
+       mutex = false
+    }  
+    
+    if (semaphore > 0) {
+        execute
+        semaphore--;
+    }
+
+> Q5. Network concepts
+* tcp vs udp
+* packets arrive in order
+
+**2nd video interview**  
+_1 hour_ Search team manager
+
+> Leetcode 32. Longest Valid Parentheses
+
+> Explain your NLP project. Why you use attention here......etc.
 
 - - - 
 
 ## 五、OA/ Take Home Assignment
+
+TODO
 
 <a name="ebay"></a>
 ### **eBay**
