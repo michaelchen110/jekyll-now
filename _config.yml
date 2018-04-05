@@ -2,21 +2,28 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: true
+#relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:               Pu-Chin Chen
+tagline:             'M.S. Computer Science @ UCLA'
+description:         'Born in Taipei, Taiwan.<br>Studying in Los Angeles now.<br><br>Share what I saw and experienced in the United States.'
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
+excerpt_separator:  '<!-- more -->'
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Pu-Chin Chen
+  url:               https://michaelchen.github.io
+  email:             puching110@gmail.com
+  gravatar_md5:      2089b63e10c8c2e2af39df77ef525622
 
 # Custom vars
 version:             1.0.0
+
+# Gems
+plugins: [jekyll-paginate]
+paginate_path: "page:num"
+
