@@ -29,10 +29,10 @@ title: 2018北美實習面經
     * 11.06 <a href="#tencent">Tencent 中國騰訊</a> (offer)
     * 12.28 <a href="#sea">SEA</a>
 5. <a href="#oa">OA/Take Home Assignment</a>   
-    * <a href="#twitter">Twitter</a>
     * <a href="#ebay">eBay</a>
-    * <a href="#citadel">Citadel</a>
     * <a href="#adobe">Adobe</a>
+    * <a href="#twitter">Twitter</a>
+    * <a href="#citadel">Citadel</a>
 
 <br>
 
@@ -141,10 +141,10 @@ _1 hour_ 美國小哥 Senior SDE
 
 ### **LinkedIn**
 #### _內推 | Big Data Engineer Intern_
-Major components of our assessment include:
-- Application of algorithm and Computer Science fundamentals
-- Explanation and implementation of the solution in code without any of the aids engineers typically have access to (e.g. IDE, online docs)
-- Any DBMS knowledge is a positive and questions will be asked on the basics and architecture of DBMS.
+HR來信，主要考點：
+- 算法、CS基礎
+- 解釋、實作code，不用IDE以及online docs
+- DBMS基礎知識以及架構
 
 **1st phone interview (collabedit)**  
 _1 hour_ 中國小哥 Senior SDE  
@@ -222,17 +222,7 @@ _1 hour_ 中國小哥 Senior SDE
 _1 hour_ 美國大哥 Senior Data Engineer  
 自介的時候特別強調了在遠傳data science intern做database optimization，improve了一個重要query 300X的效能，從一星期reduce到半小時，讓老人家很amazing。不過這邊有個插曲。大約講了六分鐘後電話就斷線了，重打接通後繼續，花了些時間解釋我怎麼做優化的。接著他就說我來看看要考你什麼題（能感覺出他手上有一疊題庫，隨機抽考)
 
-> Q1: isNumber
-
-    /*
-     * Returns true if the input string is a number and false otherwise
-     */
-
-    //+1
-    //-1
-    //1.0
-    //32
-    //.2
+> Q1: Returns true if the input string is a number and false otherwise. For example +1 ,-1 ,1.0, 32, .2 
 
     import java.util.*;
 
@@ -245,12 +235,13 @@ _1 hour_ 美國大哥 Senior Data Engineer
             // implementation here
             boolean sign = false;
             for (int i = 0; i < toTest.length(); i++) {
-                if (i == 0 && toTest.charAt(i) == '+' || toTest.charAt(i) == '-') continue;
+                char ch = toTest.charAt(i);
+                if (i == 0 && ch == '+' || ch == '-') continue;
                 if (toTest.charAt(i) == '.') {
                     if (sign) return false;
                     else sign = true;
                 }
-                else if (toTest.charAt(i) >= '0' && toTest.charAt(i) <= '9') continue;
+                else if (ch >= '0' && ch <= '9') continue;
                 else return false;
             }
             return true;
@@ -268,12 +259,13 @@ _1 hour_ 美國大哥 Senior Data Engineer
 
 比方說商品擺放位置、商店location、每個transaction同時出現的items.....；然後還跟他說data mining的一些概念，舉了例子比方說可樂打折但是薯片漲價，來提高selling performance
 
-最後他說他非常喜歡我，希望能加入LinkedIn，還說會給我strongly recommend to recruiter。面試完相當激動，覺得努力很久終於有收穫了，唯一一個可能就是提前招滿，但是HR跟我schedule的時候說這個position才剛開始，感覺很穩了。
+最後他說希望我能加入LinkedIn，會給我寫strongly recommend to recruiter。面試完相當激動，覺得努力很久終於有收穫了，唯一一個可能就是提前招滿，但是HR跟我schedule interview的時候說這個position才剛開始招，感覺很穩了。
 
-過幾天後HR打來說你的feedback positive但招滿了。。。。。。打擊非常大，畢竟是我表現最好的的兩個面試，想不到這樣還能被拒。
+過幾天後HR打來說你的feedback positive但招滿了。。。。。。打擊非常大，完美面試、交流順暢，還能被拒，發文討拍後move on繼續面其他間。
 
+<br>
 #### _內推 | Data Science, Analytic Intern_ 
-The interviewer may ask you problem solving questions with a LinkedIn business case study. We’re looking to see how you might approach a real-world situation that requires a structured approach and you will be measured on framework, assumptions, and communication in solving these problems. Please go into details on the analytical approach and steps that lead to the conclusions. The interviewer can also go in depth and ask questions on applied statistics/machine learning/probability theory to business problems. We’re looking to understand how you reason with mathematical concepts and inferences.  
+HR來信說明面試範圍：problem solving問題，主要會是領英實際面對的business case study；解題的時候看重使用的framework, assumptions, communication，請有細節的使用analytical approach還有步驟並且引導出最終結論。為了了解你怎麼reason with mathematical concepts and inferences，也會考applied statistics/machine learning/probability theory to business problems. 
 
 **HR Screening**  
 _20 mins_   
@@ -379,6 +371,8 @@ _45 mins_ 美國姊姊 Data Scientist
 
 **2nd video interview (collabedit, BlueJeans)**  
 _45 mins_ 中國小哥 Data Scientist  
+這邊我用MECE框架，一個consulting company常用的解決問題模型。
+
 > Focus on A/B testing
 
 * There is a dramatic drop of user usage on our website last two weeks. To see what was happening, how would you test?   
@@ -393,7 +387,7 @@ _45 mins_ 中國小哥 Data Scientist
 * explain alpha value 
 * explain p-value to a person without techical background
 
-A/B testing完全沒學過、統計很多也忘光光，就直接跪了。
+A/B testing完全沒學過、統計很多也忘光光，直接跪了。
 
 ### **Intel**
 #### _Info Session_  
@@ -407,6 +401,7 @@ _1 hour_ 中國大哥
 
 ### **PayPal**
 #### _海投 | Cloud Engineer Intern_
+Qualified candidate should be good at using problem solving skills, algorithms and data structures to use machine learning for our platform.  
 **1st phone interview**  
 _1 hour_ 印度女
 
@@ -1000,6 +995,11 @@ _1 hour_ Search team manager
 #### _Take Home | Data Science Inern_
 Finished Kaggle chanllege <a href="https://www.kaggle.com/c/DontGetKicked">"Don't Get Kicked"</a> and upload
 
+<a name="adobe"></a>
+### **Adobe**
+#### _Take Home | Data Science Inern_  
+給了一個data.csv，要從中create model to predict y，然後把model對test.csv的prediction回傳給HR
+
 <a name="twitter"></a>
 ### **Twitter**
 #### _OA | Software Development Engineer Intern_
@@ -1028,14 +1028,3 @@ Finished Kaggle chanllege <a href="https://www.kaggle.com/c/DontGetKicked">"Don'
     - hyperparameter search v.s. grid search
     - L0, L1, L2 norm
     - KNN algorithm
-
-<a name="adobe"></a>
-### **Adobe**
-#### _Take Home | Data Science Inern_
-* Using some set of the variables a-h in the file intern_data.csv, create a model to predict y
-* Use your model to create predicted values of y given the variables a-h in the file intern_test.csv
-* Respond with a file intern_predicted.csv which contains two columns:
-    - i: the index from intern_test.csv
-    - y: your predicted values
-* Please also include the code you used to generate the predicted values in your response. There are no restrictions on programming language.
-
