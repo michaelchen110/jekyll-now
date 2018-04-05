@@ -86,14 +86,14 @@ Google請人內推完以後，會收到一封確認信然後選擇三個要申�
 
 **1st phone interview (research)**  
 _45 mins_ ，中國大哥  
-簡單介紹他的team在做NLP後，我也自介，接著就開始問我在UCLA NLP lab做的研究。我先介紹multi dialgue using neural coreference resolution的task，接著講model。對方問說問何這邊要用attention mechanism？我就解釋了下；然後又問對於代名詞的部份，要怎麼有效做coref；
+簡單介紹他的team在做NLP後，我也自介，接著就開始問我在UCLA NLP lab做的研究。我先介紹multi dialgue using neural coreference resolution的task，接著講model。對方問說問何這邊要用attention mechanism？我就解釋了下；然後又問對於代名詞的部份，要怎麼有效做coref；問蠻細的，會問model每個步驟為何要這樣做。
 
 **2nd phone interview (coding)**   
 _45 mins_ ，印度小哥  
 在第一通電面完後緊接著第二輪。一開始三哥電話還打不通，我才意識到宿舍的訊號太爛。接通後給了Google Doc，
 問了一道leetcode原題
 
-    Search in Rotated Sorted Array
+    里叩的傘散，搜尋旋轉排序過的序列
 
 比較值得一提的是中間的溝通。由於剛來美國，聽印度腔英文真的不適應，加上宿舍收訊巨爛，對方講了很多都沒能聽清楚，因此他很多不用講的，打在Google doc上。當時演戲技能太差又緊張，一開始馬上就講正解用binary search，他就說，我看不出來這哪裡能用binary search，然後就說你要不先用一個簡單的方法吧。我就說O(N)從頭開始找，然後再優化。接著講bianry search做法，簡單解釋一下算法，就開始寫代碼。寫一寫他問為什麼要這樣分if else，我就說就是我前面解釋的那個，然後他說我沒有講，我就很無言，然後給他看上面我打字解釋過的部份再講一次，接著就把它寫完了。不過有syntax error，前幾天寫太多tensorflow，結果用Java不小心沒加分號......被他說：「I think you misuse the other language」。最後說他很surprise我能用這個解法解出來。
 
@@ -149,7 +149,7 @@ Major components of our assessment include:
 **1st phone interview (collabedit)**  
 _1 hour_ 中國小哥 Senior SDE  
 
-> Leetcode 200. Number of Islands
+> 利口餓零靈，小島數量
 
     //Time O(grid)
 
@@ -183,7 +183,7 @@ _1 hour_ 中國小哥 Senior SDE
         dfs(grid, used, i - 1, j);
     }
 
-> Leetcode 236. Lowest Common Ancestor of a Binary Search Tree    
+> 利扣惡傘溜，二搜樹最小共同祖先
 
     // p , q may not even exist in tree
     public TreeNode LCA(TreeNode root, int p, int q) {
@@ -496,7 +496,7 @@ _1 hour_ 印度男
 **3rd video interview (skype)**  
 _1 hour_ 印度男  
 接著上一輪繼續面  
-> Q1: Leetcode 原題 Best Time to Buy and Sell Stock
+> 力扣夭兩腰，買賣股票最佳時機
 
 遇到插曲，collabedit網站掛掉寫不了code，我就在skype上面打一行說明一行，而且還沒有縮排，但還是有解釋清楚。
 
@@ -762,7 +762,7 @@ _30 mins_  CEO
 **HR Screening**  
 問了一下過去experience，我在被內推的時候並沒有選擇position，HR就說有新開一個ML/NLP position感覺跟我比較match，就幫我schedule了隔天給相關的team interview
 
-**Phone Interview**  
+**1st Phone Interview**  
 _45 mins_ 印度小哥   
 給了一個coding的連結，結果全部都問觀念，focus on ML, python language and OS concepts
 * given two python list with unsorted integers, return same elements
@@ -772,6 +772,9 @@ _45 mins_ 印度小哥
 * any experience in cloud computing, parallel?
 * any experience in virtual machine?
 * explain pandas / numpy / python built-in list
+
+**2nd Phone Interview**  
+on going
 
 - - - 
 <a name="finance"></a>
@@ -852,7 +855,7 @@ _1 hour_ 中國大哥
 
 過程中我詢問是否要think out loud，他說你全部寫完再跟我說。這點與美國面試相當不同。寫完後被問了複雜度，接著小哥從紙堆中又拿了一道題出來，「我們再來看一下這道題」
 
-    Leetcode 417. Pacific Atlantic Water Flow
+    李寇是妖妻，太平洋大西洋水流
 
 半年多前做過這道，但忘了，跟面試官提出了幾個思路，被面試官說你再想一下，最後想出了解法並說明，但有點run out of time。所以剩下十分鐘就聊一下NLP research，我講解了一下deep learning model in coreference resolution。
 
@@ -869,7 +872,7 @@ _1 hour_ 中國姐姐
 #### _Recruiter LinkedIn 聯繫 | Software Development Engineer Intern_
 新加坡的公司，Garena前身
 
-**HR Screening (Skype)**
+**HR Screening (Skype)**  
 說明了有三個組，mobile development, backend, Shopee Search team
 
 **1st phone interview**
@@ -1001,7 +1004,7 @@ Finished Kaggle chanllege <a href="https://www.kaggle.com/c/DontGetKicked">"Don'
 ### **Twitter**
 #### _OA | Software Development Engineer Intern_
 有投就給OA，有六七組題庫隨機抽選一組，我拿到了OA Test 7，共三題，建議90 mins內完成
-> Leetcode 585. Investments in 2016  
+> 裡口舞芭武，在前年投資
 
 > 忘了，easy 難度的題  
 
