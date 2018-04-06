@@ -3,7 +3,10 @@ layout: post
 title: 2018北美實習面經
 ---
 
+近年CS求職難度越來越大，
 這邊整理了我在找2018 summer intern面試的17家公司，接近30輪interviews，還有4家OA/Take home assignment。先分類、再按照面試時間排序。
+
+
 
 <!-- more -->
 
@@ -82,22 +85,20 @@ _30 mins_ ，美國男 manager
 
 Google請人內推完以後，會收到一封確認信然後選擇三個要申請的position。我那時候內推完沒有收到信，以為這樣就沒問題了，後來過了SDE intern application deadline我才發現沒有內推到，請朋友再內推一次時只剩下research intern了，只好硬著頭皮上。
 
-面試Research intern前，HR會給一個問卷讓你提供你的研究方向，我當時是選NLP，結果他幫我schedule了一個CV方向的人面我，於是我趕緊寄信讓他更正。 
+面試Research intern前，HR會給一個問卷讓你提供你的研究方向，我當時是選NLP，結果他幫我schedule了一個CV方向的人面我，於是我趕緊寄信讓他更正。有簽了NDA所以寫的隱晦一點。  
 
 **1st phone interview (research)**  
 _45 mins_ ，中國大哥  
-簡單介紹他的team在做NLP後，我也自介，接著就開始問我在UCLA NLP lab做的研究。我先介紹multi dialgue using neural coreference resolution的task，接著講model。對方問說問何這邊要用attention mechanism？我就解釋了下；然後又問對於代名詞的部份，要怎麼有效做coref；問蠻細的，會問model每個步驟為何要這樣做。
+簡單介紹他的team在做NLP後，我也自介，接著就開始問我在UCLA NLP lab做的研究。我先介紹multi dialgue using neural coreference resolution的task，接著講model。問為何這邊要用attention mechanism？又問對於代名詞，要怎麼有效做coref；問蠻細的，會問model每個步驟為何要這樣做。
 
 **2nd phone interview (coding)**   
 _45 mins_ ，印度小哥  
-在第一通電面完後緊接著第二輪。一開始三哥電話還打不通，我才意識到宿舍的訊號太爛。接通後給了Google Doc，
-問了一道leetcode原題
+在第一通電面完後緊接著第二輪。一開始對方電話還打不通，我才意識到宿舍的訊號太爛。接通後給了Google Doc，
+問了一道原題里叩的傘散。
 
-    里叩的傘散，搜尋旋轉排序過的序列
+比較值得一提的是中間的溝通。由於剛來美國，聽印度腔英文真的不適應，加上宿舍收訊巨爛，對方講了很多都沒能聽清楚，因此他很多不用講的，打在Google doc上。當時演戲技能太差又緊張，一開始馬上就講正解用二叉搜，他就說，我看不出來這哪裡能用二叉搜，然後就說你要不先用一個簡單的方法吧。我就說O(N)從頭開始找，然後再優化。接著講二叉搜做法，簡單解釋一下算法，就開始寫代碼。寫一寫他問為什麼要這樣分if else，我就說就是我前面解釋的那個，然後他說我沒有講，我就很無言，然後給他看上面我打字解釋過的部份再講一次，接著就把它寫完了。不過有syntax error，前幾天寫太多tensorflow，結果用Java不小心沒加分號......被他說：「I think you misuse the other language」。最後說他很surprise我能用這個解法解出來。
 
-比較值得一提的是中間的溝通。由於剛來美國，聽印度腔英文真的不適應，加上宿舍收訊巨爛，對方講了很多都沒能聽清楚，因此他很多不用講的，打在Google doc上。當時演戲技能太差又緊張，一開始馬上就講正解用binary search，他就說，我看不出來這哪裡能用binary search，然後就說你要不先用一個簡單的方法吧。我就說O(N)從頭開始找，然後再優化。接著講bianry search做法，簡單解釋一下算法，就開始寫代碼。寫一寫他問為什麼要這樣分if else，我就說就是我前面解釋的那個，然後他說我沒有講，我就很無言，然後給他看上面我打字解釋過的部份再講一次，接著就把它寫完了。不過有syntax error，前幾天寫太多tensorflow，結果用Java不小心沒加分號......被他說：「I think you misuse the other language」。最後說他很surprise我能用這個解法解出來。
-
-誠懇的寫了Thank you letter，一週後HR電話打來拒，而且不給feedback。
+寫了Thank you letter，一週後HR電話打來拒，而且不給feedback。
 
 ### **Salesforce**
 #### _內推 | Softwar Engineer Intern_
@@ -603,31 +604,23 @@ _45 mins_ 美國大姊
 
 > 裡叩叭妖腰，次網域拜訪次數
 
-    private static List<String> url(List<String> u1, List<String> u2) {
-      List<String> local = new LinkedList<>();
-      List<String> global = new LinkedList<>();
-      
-      int p1 = 0, p2 = 0;
-      while (p1 < u1.size()) {
-        while (p1 < u1.size() && p2 < u2.size()) {
-          String str1 = u1.get(p1);
-          String str2 = u2.get(p2);
-          if (str1.equals(str2)) {
-            local.add(str1);
-            if (local.size() > global.size()){
-              global = new LinkedList<>(local);
-            }
-            p1++;
+    private static Map<String, Integer> countDomains(String[] counts) {
+      Map<String, Integer> map = new HashMap<>();
+      for (String count : counts) {
+        String[] parse = count.split(",");
+        int num = Integer.parseInt(parse[0]);
+        String[] domain = parse[1].split("\\.");
+        //mobile.sports.yahoo.com
+        for (int i = 0; i < domain.length; i++) {
+          StringBuilder sub = new StringBuilder();
+          for (int j = i; j < domain.length; j++) {
+            sub.append(domain[j] + ".");
           }
-          else {
-            local = new LinkedList<>();
-          }
-          p2++;
+          String subDomain = sub.toString().substring(0, sub.length()-1);
+          map.put(subDomain, map.getOrDefault(subDomain, 0) + num);
         }
-        p2 = 0;
-        p1++;
       }
-      return global;
+      return map;
     }
 
 > Problem 2: We have some clickstream data that we gathered on our client's website. Using cookies, we collected snippets of users' anonymized URL histories while they browsed the site. The histories are in chronological order and no URL was visited more than once per person.  
@@ -660,23 +653,31 @@ _45 mins_ 美國大姊
 >       (user1, user3):
 >          /three.html
 
-    private static Map<String, Integer> countDomains(String[] counts) {
-      Map<String, Integer> map = new HashMap<>();
-      for (String count : counts) {
-        String[] parse = count.split(",");
-        int num = Integer.parseInt(parse[0]);
-        String[] domain = parse[1].split("\\.");
-        //mobile.sports.yahoo.com
-        for (int i = 0; i < domain.length; i++) {
-          StringBuilder sub = new StringBuilder();
-          for (int j = i; j < domain.length; j++) {
-            sub.append(domain[j] + ".");
+    private static List<String> url(List<String> u1, List<String> u2) {
+      List<String> local = new LinkedList<>();
+      List<String> global = new LinkedList<>();
+      
+      int p1 = 0, p2 = 0;
+      while (p1 < u1.size()) {
+        while (p1 < u1.size() && p2 < u2.size()) {
+          String str1 = u1.get(p1);
+          String str2 = u2.get(p2);
+          if (str1.equals(str2)) {
+            local.add(str1);
+            if (local.size() > global.size()){
+              global = new LinkedList<>(local);
+            }
+            p1++;
           }
-          String subDomain = sub.toString().substring(0, sub.length() - 1);
-          map.put(subDomain, map.getOrDefault(subDomain, 0) + num);
+          else {
+            local = new LinkedList<>();
+          }
+          p2++;
         }
+        p2 = 0;
+        p1++;
       }
-      return map;
+      return global;
     }
 
 現場compile過，也過了test case，結果還是拒了。
@@ -717,7 +718,7 @@ _30 mins_  CEO
 <a name="nutanix"></a>
 ### **Nutanix** (3600 employees)
 #### _內推 | ML/NLP intern_
-做Cloud Enterprise的公司，ML team會針對用戶使用系統的行為資料進行分析，比方說file system access, monitor anomoly behavior,，NLP的部分有兩個應用場景，一個是search query analysis，一個是document classification。
+做Cloud Enterprise的公司，最近成長勢頭很強。ML team會針對用戶使用系統的行為資料進行分析，比方說file system access, monitor anomoly behavior,，NLP的部分有兩個應用場景，一個是search query analysis，一個是document classification。
 
 **HR Screening**  
 問了一下過去experience，我在被內推的時候並沒有選擇position，HR就說有新開一個ML/NLP position感覺跟我比較match，就幫我schedule了隔天給相關的team interview
@@ -733,6 +734,8 @@ _45 mins_ 印度小哥
 * any experience in virtual machine?
 * explain pandas / numpy / python built-in list
 
+自己覺得回答的挺差的，想不到move forward了
+
 **2nd Phone Interview**  
 on going
 
@@ -743,7 +746,7 @@ on going
 <a name="sga"></a>
 ### **Strategic Global Service**
 #### _CS tea time | NLP intern_
-在LA的New Port Beach投資公司。tea time時來系上招人，說需要懂NLP的來做intern，會做news trending方面的分析。我趕緊抱著履歷上前跟來的人聊我的NLP相關經驗。後來有一天我就直接收到了他們家的offer......，連正式面試都沒有。神奇的是package還不算太糟，$500 sign up fee, $1500/week, $500 - $2000 bonus，查了一下LinkedIn profile還有公司營運狀況也還行，但還是覺得這種招聘方式不太妥，想說之後應該能拿到別的公司，就先拒了offer。
+在LA的New Port Beach投資公司。tea time時來系上招人，說需要懂NLP的來做intern，會做news trending方面的分析。我趕緊抱著履歷上前跟來的人聊我的NLP相關經驗。後來有一天我就直接收到了他們家的offer，連正式面試都沒有。儘管給的package不差，查了一下LinkedIn profile還有公司營運狀況也還行，但還是覺得這種招聘方式不太妥，怕怕的就沒有接下offer。
 
 <a name="deshaw"></a>
 ### **D.E.Shaw**
@@ -894,16 +897,16 @@ _1 hour_ 中國姐姐
 > Q2: There are following two tables in a database.
 > user_info table, which stores users' basic information. Structured as below:
 > 
-> Field		       Type		    Description  
-> user_id		    INT		    ID of user. Primary key  
-> user_name		VARCHAR(32)		username  
+>         Field         Type              Description  
+>       user_id          INT   ID of user(Primary key)
+>     user_name  VARCHAR(32)                 username  
 > 
 > user_login_log table, which stores users' login records. Structured as below:
 > 
-> Field		    Type	    	Description  
-> id		        INT		        primary key  
-> user_id		    INT		        ID of user.  
-> login_time		DATETIME		time of this login.  
+>          Field       Type         Description  
+>             id        INT         primary key  
+>        user_id        INT          ID of user  
+>     login_time   DATETIME  time of this login
 > 
 > Now please write a SQL statement to query user name and login count for all users who have logged in for more than 100 times in the year of 2014, and sort the query results by the login count in descending order:
 
