@@ -601,31 +601,7 @@ _45 mins_ 美國大姊
 
 先花了十五分鐘講prior internship experience
 
-> Problem 1: Write a function that takes this input as a parameter and returns a data structure containing the number of hits that were recorded on each domain AND each domain under it. For example, an impression on "sports.yahoo.com" counts for "sports.yahoo.com", "yahoo.com", and "com". (Subdomains are added to the left of their parent domain. So "sports" and "sports.yahoo" are not valid domains.)
->
->       Expected output (in any order):
->       1320    com
->        900    google.com
->        410    yahoo.com
->         60    mail.yahoo.com
->         10    mobile.sports.yahoo.com
->         50    sports.yahoo.com
->         10    stackoverflow.com
->          3    org
->          3    wikipedia.org
->          2    en.wikipedia.org
->          1    es.wikipedia.org
->
->       String[] counts = {
->           "900,google.com",
->           "60,mail.yahoo.com",
->           "10,mobile.sports.yahoo.com",
->           "40,sports.yahoo.com",
->           "300,yahoo.com",
->           "10,stackoverflow.com",
->           "2,en.wikipedia.org",
->           "1,es.wikipedia.org" };
-
+> 裡叩叭妖腰，次網域拜訪次數
 
     private static List<String> url(List<String> u1, List<String> u2) {
       List<String> local = new LinkedList<>();
@@ -683,17 +659,6 @@ _45 mins_ 美國大姊
 >   
 >       (user1, user3):
 >          /three.html
->   
->       Test cases:
->
->       List<String> user0 = Arrays.asList(
->           "/nine.html", "/four.html", "/six.html", "/seven.html", "/one.html" );
->       List<String> user1 = Arrays.asList(
->           "/one.html", "/two.html", "/three.html", "/four.html", "/six.html");
->       List<String> user2 = Arrays.asList(
->           "/nine.html", "/two.html", "/three.html", "/four.html", "/six.html",
->           "/seven.html");
->       List<String> user3 = Arrays.asList("/three.html", "/eight.html");
 
     private static Map<String, Integer> countDomains(String[] counts) {
       Map<String, Integer> map = new HashMap<>();
