@@ -3,7 +3,8 @@ layout: post
 title: 2018北美實習面經
 ---
 
-近年CS求職難度越來越大，
+近年CS求職難度越來越大，找實習的過程很艱辛，但也受到很多人幫助、鼓勵，因此想要回饋一下，分享給需要的朋友們。  
+
 這邊整理了我在找2018 summer intern面試的17家公司，接近30輪interviews，還有4家OA/Take home assignment。先分類、再按照面試時間排序。
 
 
