@@ -402,8 +402,8 @@ _1 hour_ 中國大哥
 ### **PayPal**
 #### _海投 | Cloud Engineer Intern_
 最後決定要去他們家，但最近在做background check，雖然沒簽NDA但怕會被取消offer，就先暫時拿掉面試流程，有興趣可以私聊。
-詳情可以看<a href="http://www.1point3acres.com/bbs/thread-140224-1-1.html">這篇</a>，被Intel background check時取消offer。
-
+詳情可以看<a href="http://www.1point3acres.com/bbs/thread-140224-1-1.html">這篇</a>，拿到Intel offer後發了<a href="http://www.1point3acres.com/bbs/thread-138820-1-1.html">面經</a>，結果background check時被cancel offer。
+ 
 - - - 
 <a name="startup"></a>
 ## 二、中小型、新創 (\< 5000 employees)
@@ -446,6 +446,8 @@ _30 mins_ 美國工程師小哥
 * 如果我們有個database，裡面有很多的questions，有一個人問了一個question，要怎麼樣從我們DB找出最相關的那個句子？
     - 需要哪些training data? Tf-Idf
     - 這樣有什麼問題？兩個相似的句子不同長度會變一樣value所以需要RNN
+
+隔幾天就給了offer，小team處理快
 
 <a name="appfolio"></a>
 ### **AppFolio** (700 employees)
@@ -691,7 +693,7 @@ _45 mins_ 印度小哥
 <a name="sga"></a>
 ### **Strategic Global Service**
 #### _CS tea time | NLP intern_
-在LA的New Port Beach投資公司。tea time時來系上招人，說需要懂NLP的來做intern，會做news trending方面的分析。我趕緊抱著履歷上前跟來的人聊我的NLP相關經驗。後來有一天我就直接收到了他們家的offer，連正式面試都沒有。儘管給的package不差，查了一下LinkedIn profile還有公司營運狀況也還行，但還是覺得這種招聘方式不太妥，怕怕的就沒有接下offer。
+在LA的New Port Beach投資公司。tea time時來系上招人，說需要懂NLP的來做intern，會做news trending方面的分析，我趕緊抱著履歷上前跟來的人聊我的NLP相關經驗。後來有一天我就直接收到了他們家的offer，連正式面試都沒有。儘管給的package不差，查了一下LinkedIn profile還有公司營運狀況也還行，但還是覺得這種招聘方式不太妥，怕怕的就沒有接下offer。
 
 <a name="deshaw"></a>
 ### **D.E.Shaw**
@@ -774,6 +776,8 @@ _1 hour_ 中國姐姐
 * 未來職涯規劃
 * 美國的科技科研還是更前沿一點，為何要來我們這邊？
 * 對加班的看法
+
+大約兩週過後就給了offer。
 
 <a name="sea"></a>
 ### **SEA**
