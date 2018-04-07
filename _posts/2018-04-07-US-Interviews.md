@@ -5,7 +5,7 @@ title: 2018北美實習面經
 
 近年CS求職難度越來越大，找實習的過程很艱辛，但也受到很多人幫助、鼓勵，因此想要回饋一下，分享給需要的朋友們。關於面試的交流，可以參考<a href="http://www.1point3acres.com/bbs/thread-105717-1-1.html">一畝這篇</a>。我面下來的感覺是intern題目普遍都不難，反倒是溝通很關鍵，這點容易被忽略。 
 
-這邊整理了我在找2018 summer intern這半年來面試的17家公司，接近30輪interviews，以及4家OA/Take home assignment。
+這邊整理了我在找2018 summer intern這半年來面試的17家公司，接近30輪interviews，以及4家OA/Take home assignment。除了考題，我也盡可能記錄下了面試的過程，這樣更能幫助理解實際面試的狀況。code都是當下寫的所以會有錯誤，如有任何建議也歡迎一起討論:)
 
 <!-- more -->
 
@@ -142,7 +142,7 @@ HR來信，主要考點：
 **1st phone interview (collabedit)**  
 _1 hour_ 中國小哥 Senior SDE  
 
-> 利口餓零靈，小島數量
+> Leetcode 200. Number of Islands    
 
     //Time O(grid)
 
@@ -176,7 +176,7 @@ _1 hour_ 中國小哥 Senior SDE
         dfs(grid, used, i - 1, j);
     }
 
-> 利扣惡傘溜，二搜樹最小共同祖先
+> Leetcode 236. Lowest Common Ancestor of a Binary Tree    	
 
     // p , q may not even exist in tree
     public TreeNode LCA(TreeNode root, int p, int q) {
@@ -491,7 +491,7 @@ _1 hour_ 印度男
 **3rd video interview (skype)**  
 _1 hour_ 印度男  
 接著上一輪繼續面  
-> 力扣夭兩腰，買賣股票最佳時機
+> Leetcode 121. Best Time to Buy and Sell Stock    
 
 遇到插曲，collabedit網站掛掉寫不了code，我就在skype上面打一行說明一行，而且還沒有縮排，但還是有解釋清楚。
 
@@ -762,7 +762,7 @@ _45 mins_ 印度小哥
                 // iteratively calculate number
                 for (; i < len - 1; i++) {
                     int next = input.charAt(i + 1) - '0';
-                    if (next < 0 || 9 < next) break;
+                    if (next <= 0 || 9 <= next) break;
                     num = num * 10 + next;
                 }
                 stack.push(num);
@@ -883,7 +883,7 @@ _1 hour_ 中國大哥
 
 過程中我詢問是否要think out loud，他說你全部寫完再跟我說。這點與美國面試相當不同。寫完後被問了複雜度，接著小哥從紙堆中又拿了一道題出來，「我們再來看一下這道題」
 
-    李寇是妖妻，太平洋大西洋水流
+    Leetcode 417. Pacific Atlantic Water Flow    
 
 半年多前做過這道，但忘了，跟面試官提出了幾個思路，被面試官說你再想一下，最後想出了解法並說明，但有點run out of time。所以剩下十分鐘就聊一下NLP research，我講解了一下deep learning model in coreference resolution。
 
