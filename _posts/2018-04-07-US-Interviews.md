@@ -402,7 +402,7 @@ _1 hour_ 中國大哥
 ### **PayPal**
 #### _海投 | Cloud Engineer Intern_
 最後決定要去他們家，但最近在做background check，雖然沒簽NDA但怕會被取消offer，就先暫時拿掉面試流程，有興趣可以私聊。
-詳情可以看<a href="http://www.1point3acres.com/bbs/thread-140224-1-1.html">這篇</a>，某位分享面經的受害者被Intel background check時取消offer。
+詳情可以看<a href="http://www.1point3acres.com/bbs/thread-140224-1-1.html">這篇</a>，被Intel background check時取消offer。
 
 - - - 
 <a name="startup"></a>
