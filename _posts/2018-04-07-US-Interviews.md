@@ -176,7 +176,7 @@ _1 hour_ 中國小哥 Senior SDE
         dfs(grid, used, i - 1, j);
     }
 
-> Leetcode 236. Lowest Common Ancestor of a Binary Tree    	
+> Leetcode 235. Lowest Common Ancestor of a Binary Search Tree
 
     // p , q may not even exist in tree
     public TreeNode LCA(TreeNode root, int p, int q) {
