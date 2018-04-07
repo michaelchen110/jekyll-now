@@ -921,7 +921,7 @@ Finished Kaggle chanllege <a href="https://www.kaggle.com/c/DontGetKicked">"Don'
 ### **Twitter**
 #### _OA | Software Development Engineer Intern_
 有投就給OA，有六七組題庫隨機抽選一組，我拿到了OA Test 7，共三題，建議90 mins內完成
-> 裡口舞芭武，在前年投資
+> Leetcode 585. Investments in 2016 
 
 > 忘了，easy 難度的題  
 
