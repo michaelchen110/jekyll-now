@@ -572,7 +572,7 @@ _30 mins_ 美國工程師小哥
 ### **AppFolio** (700 employees)
 #### _CS tea time | Software Development Engineer Intern_
 **Video Interview (GoToMeeting)**  
-_45 mins_ 美國小哥
+_45 mins_ 美國小哥  
 前面花了比較多時間自介，小哥講了AppFolio在做的，並說雖然實習寫Ruby，但是會給training。接著做題，比較特別，給了一個pseudo code，問會print出什麼，把結果畫在紙上，是個三角形，並對著攝像頭給他看。
 
 <a name="tripadvisor"></a>
@@ -737,6 +737,7 @@ _45 mins_ 印度小哥
 自己覺得回答的挺差的，想不到move forward了
 
 **2nd Phone Interview(Glider)**  
+_45 mins_ 印度小哥  
 
 > Leetcode 772. Basic Calculator III 
 
