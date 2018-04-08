@@ -27,3 +27,4 @@ version:             1.0.0
 plugins: [jekyll-paginate]
 paginate_path: "page:num"
 
+future: false
