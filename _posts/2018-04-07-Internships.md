@@ -702,7 +702,7 @@ D.E.Shaw是在紐約的一家Hedge fund，除了software engineer，其餘員工
 
 **Phone Interview**
 _1 hour_ 美國大哥  
-Introduction. He introduced himself, and then let me introduce my previous experience. He asked me further about the machine learning internship expericen and how I implemented deep learning algorithm.
+Introduction. He introduced himself, and then let me introduce my previous experience. He asked me further about the machine learning internship experience and how I implemented deep learning algorithm.
 > python knowledge
 
 * tuple concept

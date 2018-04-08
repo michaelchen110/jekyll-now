@@ -9,4 +9,4 @@ To put theory into practice, Pu-Chin started from two industrial experiences in 
 
 ### Contact me
 
-[puchinchen@cs.ucla.edu](mailto:puchinchen@cs.ucla.edu)
+[puching110@gmail.com](mailto:puching110@gmail.com)
