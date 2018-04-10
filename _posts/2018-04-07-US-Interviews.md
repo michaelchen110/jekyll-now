@@ -22,7 +22,7 @@ title: 2018北美實習面經
     * 01.10 <a href="#tripadvisor">TripAdvisor</a>
     * 01.27 <a href="#mulesoft">Mulesoft</a>
     * 02.16 <a href="#datahero">DataHero</a>
-    * 03.26 <a href="#nutanix">Nutanix</a>
+    * 03.26 <a href="#nutanix">Nutanix</a> (offer)
 3. <a href="#finance">金融</a>
     * 11.02 <a href="#sga">Strategic Global Service</a> (offer)
     * 01.17 <a href="#deshaw">D.E.Shaw</a>
