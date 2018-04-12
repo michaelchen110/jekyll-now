@@ -401,9 +401,130 @@ _1 hour_ 中國大哥
 
 ### **PayPal**
 #### _海投 | Cloud Engineer Intern_
-最後決定要去他們家，但最近在做background check，雖然沒簽NDA但怕會被取消offer，就先暫時拿掉面試流程，有興趣可以私聊。
-詳情可以看<a href="http://www.1point3acres.com/bbs/thread-140224-1-1.html">這篇</a>，拿到Intel offer後發了<a href="http://www.1point3acres.com/bbs/thread-138820-1-1.html">面經</a>，結果background check時被cancel offer。
- 
+Qualified candidate should be good at using problem solving skills, algorithms and data structures to use machine learning for our platform.  
+**1st phone interview**  
+_1 hour_ 印度女
+
+> Q1: 如何做Outlier Detection  
+
+首先點出unbalance data問題，然後提出可以用semi-supervised的方法；然後再提出能用density-based clustering像是DBSCAN，並解釋了一下算法。
+
+> Q2: num of distinct words in a document
+
+    public int numdistinct(string[] file) {
+        set<string> set = new hashset<>();
+        for (string word : file) {
+            if (!set.contains(word)) set.add(word);
+        }
+        return set.size();
+    }
+
+> Q3: Implement Bubble Sort 
+
+
+**2nd video interview (skype)**  
+_1 hour_ 印度男
+> Q1: Reverse the string
+
+    // in-place
+    public String reverse(String input) {
+        int len = input.length() - 1;
+        int start = 0, end = len;
+
+        StringBuilder sb = new StringBuilder(input);
+        for (int i = 0; i < (len + 1) / 2; i++) {
+            // swap
+            char tmp = sb.charAt(i);
+            sb.setCharAt(i, sb.charAt(len - i));
+            sb.setCharAt(len - i, tmp);
+        }
+        return sb.toString();
+    }
+
+> Q2: Find top 5 most popular cities.
+> 
+>     Input:
+>     List of favorite cities for users
+>     John ->  London, New York, Sydney
+>     Mark -> London, Paris, San Francisco
+>     Suren -> Paris, Los Angeles, Cicago, Miami
+
+    public List<String> popularCities(List<List<String>> input) {
+        Map<String, Integer> map = new HashMap<>();
+        Map<Integer, List<String>> sortMap = new TreeMap<>();
+        List<String> res = new LinkedList<>();
+        int count = 0;
+
+        for (List<String> user : input) {
+            for (String city : user) {
+                int c = map.getOrDefault(city, 0) + 1;
+                map.put(city, c);
+            }
+        }
+        // map
+        // London: 2
+        // Paris: 2
+        // Los Angeles: 1
+        // .....
+
+        // London: 2, Paris: 2 duplicate
+        for (String k : map.keySet()) {
+            List<String> l = sortMap.getOrDefault(map.get(k), new LinkedList<>());
+            l.add(k);
+            sortMap.put(l);
+        }
+        // sortMap
+        // 2: [London, Paris]
+        // 1: [Los Angeles, ...]
+
+        for (Integer c : sortMap.keySet()) {
+            for (String city : sortMap.get(c)) {
+                if (count == 5) return res;
+                res.add(city);
+                count++;
+            }
+        }
+        // res
+        return res;
+    }
+
+**3rd video interview (skype)**  
+_1 hour_ 印度男  
+接著上一輪繼續面  
+> Leetcode 121. Best Time to Buy and Sell Stock    
+
+遇到插曲，collabedit網站掛掉寫不了code，我就在skype上面打一行說明一行，而且還沒有縮排，但還是有解釋清楚。
+
+> Q2: implement Binary Search
+
+此時colladbedit還是爛掉，於是也只能在skype messege裡敲代碼，這邊我用這個<a href="http://community.bittiger.io/topic/241/一起lintcode-二分查找看这篇就够了">binary search系列模版</a>
+
+    public int bsearch(int[] nums, int target) {
+        if (nums.length == 0) return -1;
+        int start = 0, end = nums.length - 1;
+        // 不用start < end 是為了避免有些情況會infinite loop
+        while (start + 1 < end) {
+            // 這邊跟面試官解釋了
+            // integer overflow problem using mid = (start + end) / 2
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) return mid;
+            else if (nums[mid] < target) start = mid;
+            else end = mid;
+        }
+        // 改良start + 1 < end後的二次判定
+        if (nums[start] == target) return start;
+        if (nums[end] == target) return end;
+        return -1;
+    }
+
+> Q3: 各種Java觀念
+* What's Polynorphism?
+* Why cannot use multiple inheritence? 
+* Experience in Tomcat web service?
+* 還有一些忘了
+
+HR動作很快，隔天就給了口頭offer。
+
 - - - 
 <a name="startup"></a>
 ## 二、中小型、新創 (\< 5000 employees)
@@ -685,6 +806,8 @@ _45 mins_ 印度小哥
 
 其他人被問到的
 > Leetcode 468. Validate IP Address
+
+隔幾天就給了Offer。
 
 - - - 
 <a name="finance"></a>
