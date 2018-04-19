@@ -28,3 +28,4 @@ plugins: [jekyll-paginate]
 paginate_path: "page:num"
 
 future: false
+
