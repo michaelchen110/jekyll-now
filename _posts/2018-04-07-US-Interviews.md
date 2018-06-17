@@ -402,6 +402,8 @@ _1 hour_ 中國大哥
 ### **PayPal**
 #### _海投 | Cloud Engineer Intern_
 Qualified candidate should be good at using problem solving skills, algorithms and data structures to use machine learning for our platform.  
+接了他們家Offer並簽了NDA，就先暫時不透漏了。
+{% comment %}
 **1st phone interview**  
 _1 hour_ 印度女
 
@@ -524,6 +526,7 @@ _1 hour_ 印度男
 * 還有一些忘了
 
 HR動作很快，隔天就給了口頭offer。
+{% endcomment %}
 
 - - - 
 <a name="startup"></a>
