@@ -84,10 +84,8 @@ _30 mins_ ，美國男 manager
 
 Google請人內推完以後，會收到一封確認信然後選擇三個要申請的position。我那時候內推完沒有收到信，以為這樣就沒問題了，後來過了SDE intern application deadline我才發現沒有內推到，請朋友再內推一次時只剩下research intern了，只好硬著頭皮上。
 
-面試Research intern前，HR會給一個問卷讓你提供你的研究方向，我當時是選NLP，結果他幫我schedule了一個CV方向的人面我，於是我趕緊寄信讓他更正。
+面試Research intern前，HR會給一個問卷讓你提供你的研究方向，我當時是選NLP，結果他幫我schedule了一個CV方向的人面我，於是我趕緊寄信讓他更正。 phone interview形式是連續兩輪背靠背，一輪各45 min（中間沒有休息）。  
 
-
-連續兩輪背靠背（中間沒有休息）
 **1st phone interview**   
 這一輪都是問研究經驗。我先簡單介紹在UCLA NLP Lab做的Project，並詳細解釋用了什麼model。面試官在每一個細節都會提出問題，比方說問和你在這邊是用Bi-LSTM，這邊用Attention的目的是什麼，Dataset怎麼預處理，Evaluation Metrics如何定，Results如何，也有問說在我的case中，有些xxx的數據可能會讓我的model有問題，我有沒有想過？有的話該怎麼改進？問得非常仔細，倒是沒問ML/DL的基本知識。不過我對NLP的基礎還是挺薄弱，不太禁得起考驗，所以應該在這輪掛了。
 
