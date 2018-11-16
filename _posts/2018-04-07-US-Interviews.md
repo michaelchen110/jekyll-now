@@ -84,9 +84,17 @@ _30 mins_ ，美國男 manager
 
 Google請人內推完以後，會收到一封確認信然後選擇三個要申請的position。我那時候內推完沒有收到信，以為這樣就沒問題了，後來過了SDE intern application deadline我才發現沒有內推到，請朋友再內推一次時只剩下research intern了，只好硬著頭皮上。
 
-面試Research intern前，HR會給一個問卷讓你提供你的研究方向，我當時是選NLP，結果他幫我schedule了一個CV方向的人面我，於是我趕緊寄信讓他更正。有簽了NDA就不透漏太多了，一輪問研究經驗，一輪純寫代碼，考了LC原題。
+面試Research intern前，HR會給一個問卷讓你提供你的研究方向，我當時是選NLP，結果他幫我schedule了一個CV方向的人面我，於是我趕緊寄信讓他更正。
 
-比較值得一題的是第二輪的溝通。面我的是大家普遍最怕的印度工程師，雖然從一開始他除了講的，也還會把所說的重點打在Google doc上。但我剛來沒多久印度腔還很不適應，對方語速也偏快，中間好幾次聽不清楚還是得請他重講。建議來美國多跟印度人講話或是至少聽他們說話，熟悉一下印度腔。
+
+連續兩輪背靠背（中間沒有休息）
+**1st phone interview**   
+這一輪都是問研究經驗。我先簡單介紹在UCLA NLP Lab做的Project，並詳細解釋用了什麼model。面試官在每一個細節都會提出問題，比方說問和你在這邊是用Bi-LSTM，這邊用Attention的目的是什麼，Dataset怎麼預處理，Evaluation Metrics如何定，Results如何，也有問說在我的case中，有些xxx的數據可能會讓我的model有問題，我有沒有想過？有的話該怎麼改進？問得非常仔細，倒是沒問ML/DL的基本知識。不過我對NLP的基礎還是挺薄弱，不太禁得起考驗，所以應該在這輪掛了。
+
+**2nd phone interview**   
+考了LC傘山的原題，用Google Doc。
+
+面我的是大家普遍最怕的印度工程師，雖然從一開始他除了講的，也還會把所說的重點打在Google doc上。但我剛來沒多久印度腔還很不適應，對方語速也偏快，中間好幾次聽不清楚還是得請他重講。建議來美國多跟印度人講話或是至少聽他們說話，熟悉一下印度腔。
 
 另外一點就是因為問了原題，我一開始就給了最優解，沒有先給一個較差但直覺的解法，他就說他看不出來為何要用這個最優的解法，說你要不要先從簡單的開始。雖然最後還是寫了最佳解，但溝通並不是非常順暢，一週後跪了。所以交流很重要。一個練習電面的方法是平常刷題時邊寫邊think out loud，會更像真實面試情境。
 
@@ -403,7 +411,7 @@ _1 hour_ 中國大哥
 #### _海投 | Cloud Engineer Intern_
 Qualified candidate should be good at using problem solving skills, algorithms and data structures to use machine learning for our platform.  
 接了他們家Offer並簽了NDA，就先暫時不透漏了。
-{% comment %}
+
 **1st phone interview**  
 _1 hour_ 印度女
 
@@ -526,7 +534,6 @@ _1 hour_ 印度男
 * 還有一些忘了
 
 HR動作很快，隔天就給了口頭offer。
-{% endcomment %}
 
 - - - 
 <a name="startup"></a>
